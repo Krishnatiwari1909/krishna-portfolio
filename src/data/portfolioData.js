@@ -64,7 +64,7 @@ export const projects = [
     stack: ['JavaScript', '3D Web Simulation', 'Azure Static Web Apps'],
     accent: 'cyan',
     githubUrl: 'https://github.com/Krishnatiwari1909/Orbit-lab',
-    liveUrl: '#', 
+    liveUrl: 'https://white-field-012c90a00.6.azurestaticapps.net/', 
   },
   {
     id: 'nutrition-ai',
