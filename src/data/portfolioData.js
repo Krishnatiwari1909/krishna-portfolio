@@ -8,7 +8,7 @@
 export const profile = {
   name: 'Krishna Tiwari',
   role: 'Computer Science & Engineering Student',
-  tagline: 'Building systems that leave the ground — from orbital simulations to full-stack AI apps.',
+  tagline: 'Building scalable full-stack software and intelligent AI solutions, with engineering experience spanning cloud infrastructure, computer vision, machine learning, and modern RAG architectures.',
   location: 'Bengaluru, India',
   email: 'krishna.tiwaricap@gmail.com',
   status: 'Open to internships & collaborations',
@@ -63,7 +63,7 @@ export const projects = [
     details: 'Spearheaded a 4-member hackathon team across India Innovation, AMD Slingshot, and Microsoft Imagine Cup.',
     stack: ['JavaScript', '3D Web Simulation', 'Azure Static Web Apps'],
     accent: 'cyan',
-    githubUrl: 'https://github.com/Krishnatiwari1909',
+    githubUrl: 'https://github.com/Krishnatiwari1909/Orbit-lab',
     liveUrl: '#', 
   },
   {
@@ -75,7 +75,7 @@ export const projects = [
     details: 'Backed by Supabase Edge Functions (Deno) and the Google Gemini API for NLP parsing.',
     stack: ['React', 'Tailwind CSS', 'Supabase', 'Gemini API'],
     accent: 'emerald',
-    githubUrl: 'https://github.com/Krishnatiwari1909',
+    githubUrl: 'https://github.com/Krishnatiwari1909/Nutrition-Tracking-App',
     liveUrl: null,
   },
   {
@@ -87,7 +87,7 @@ export const projects = [
     details: 'Solves API rate-limiting bottlenecks using ChromaDB, Gemini Embeddings, and the Groq API.',
     stack: ['Python', 'ChromaDB', 'Groq API', 'Gradio'],
     accent: 'indigo',
-    githubUrl: 'https://github.com/Krishnatiwari1909/hybrid-rag-chatbot',
+    githubUrl: 'https://github.com/Krishnatiwari1909/pdf-rag-engine',
     liveUrl: null,
   },
   {
@@ -111,7 +111,7 @@ export const projects = [
     details: 'Zero-shot classification pipeline powered by facebook/bart-large-mnli.',
     stack: ['Python', 'Transformers', 'Gradio', 'PyPDF2'],
     accent: 'emerald',
-    githubUrl: 'https://github.com/Krishnatiwari1909',
+    githubUrl: 'https://github.com/Krishnatiwari1909/document-classifier',
     liveUrl: null,
   },
   {

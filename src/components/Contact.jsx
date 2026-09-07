@@ -72,7 +72,7 @@ export default function Contact({ onCopy }) {
         <LinkCard
           icon={Linkedin}
           label="LinkedIn"
-          value="krishna-tiwari-87906b335"
+          value="Krishna Tiwari"
           href={socials.linkedin}
         />
       </motion.div>

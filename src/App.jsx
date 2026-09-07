@@ -55,7 +55,7 @@ export default function App() {
         className="pointer-events-none fixed inset-0 z-0 opacity-60 transition-opacity duration-500"
         style={{
           background:
-            'radial-gradient(600px circle at var(--x, 50%) var(--y, 20%), rgba(34,211,238,0.06), transparent 70%)',
+            'radial-gradient(600px circle at var(--x, 50%) var(--y, 20%), rgba(26, 198, 237, 0.16), transparent 70%)',
         }}
       />
 

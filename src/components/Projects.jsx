@@ -40,7 +40,9 @@ export default function Projects() {
       <p className="mt-3 max-w-xl text-ink-500">
         From cloud orchestrations to embedded sensing — a log of what I&rsquo;ve engineered.
       </p>
-      <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:auto-rows-[220px] lg:grid-cols-4 lg:grid-flow-dense">
+
+      {/* Removed lg:auto-rows so the cards naturally expand to fit all text */}
+      <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:grid-flow-dense">
         {projects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
@@ -57,14 +59,8 @@ function ProjectCard({ project, index }) {
   const x = useMotionValue(0)
   const y = useMotionValue(0)
 
-  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [7, -7]), {
-    stiffness: 250,
-    damping: 22,
-  })
-  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-7, 7]), {
-    stiffness: 250,
-    damping: 22,
-  })
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [5, -5]), { stiffness: 250, damping: 22 })
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-5, 5]), { stiffness: 250, damping: 22 })
 
   const handleMouseMove = (e) => {
     const rect = cardRef.current.getBoundingClientRect()
@@ -91,21 +87,37 @@ function ProjectCard({ project, index }) {
     >
       <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${accent.glow} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
       
-      <div className="relative z-10">
+      {/* Top Section */}
+      <div className="relative z-20">
         <div className="flex items-start justify-between gap-3">
-          <p className={`font-mono text-[11px] uppercase tracking-[0.2em] ${accent.text}`}>
+          <p className={`mt-1.5 font-mono text-[11px] uppercase tracking-[0.2em] ${accent.text}`}>
             {project.tag}
           </p>
+          
+          {/* Action Links Moved to Top Right so they don't fight with the tech stack */}
+          <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+            {project.githubUrl && (
+              <a href={project.githubUrl} target="_blank" rel="noreferrer" className="rounded-lg border border-line-800 bg-base-950/80 p-1.5 text-ink-400 transition-colors hover:text-ink-100 hover:border-line-700" aria-label="GitHub">
+                <Github className="h-4 w-4" strokeWidth={1.75} />
+              </a>
+            )}
+            {project.liveUrl && project.liveUrl !== '#' && (
+              <a href={project.liveUrl} target="_blank" rel="noreferrer" className="rounded-lg border border-line-800 bg-base-950/80 p-1.5 text-ink-400 transition-colors hover:text-signal-cyan hover:border-signal-cyan/40" aria-label="Live Demo">
+                <Globe className="h-4 w-4" strokeWidth={1.75} />
+              </a>
+            )}
+          </div>
         </div>
         
         <h3 className={`mt-3 font-display font-semibold text-ink-100 ${isHero ? 'text-2xl sm:text-3xl' : 'text-lg'}`}>
           {project.name}
         </h3>
         
-        <p className={`mt-2 text-ink-500 line-clamp-2 sm:line-clamp-3 ${isHero ? 'max-w-md text-sm sm:text-base' : 'text-sm'}`}>
+        {/* Removed line-clamp. Text will take exactly the space it needs. */}
+        <p className={`mt-2 text-ink-500 ${isHero ? 'max-w-md text-sm sm:text-base' : 'text-sm'}`}>
           {project.description}
         </p>
-        
+
         {isHero && (
           <p className="mt-3 flex items-start gap-2 text-xs text-ink-500">
             <Users className="mt-0.5 h-3.5 w-3.5 shrink-0 text-signal-cyan" strokeWidth={2} />
@@ -114,27 +126,15 @@ function ProjectCard({ project, index }) {
         )}
       </div>
 
-      <div className="relative z-20 mt-6 flex flex-wrap items-end justify-between gap-4">
-        <div className="flex flex-wrap gap-2">
+      {/* Bottom Section */}
+      <div className="relative z-20 mt-6 flex items-end justify-between gap-2">
+        {/* Removed max-h-[28px]. Tags will wrap to a second line if needed without cutting off. */}
+        <div className="flex flex-wrap gap-1.5">
           {project.stack.map((tech) => (
-            <span key={tech} className="rounded-full border border-line-800 bg-base-950/50 px-2.5 py-1 font-mono text-[11px] text-ink-500">
+            <span key={tech} className="rounded-full border border-line-800 bg-base-950/50 px-2 py-0.5 font-mono text-[10px] text-ink-500">
               {tech}
             </span>
           ))}
-        </div>
-        
-        {/* Render Action Links Only if they exist in the data */}
-        <div className="flex items-center gap-3">
-          {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" rel="noreferrer" className="text-ink-700 transition-colors hover:text-ink-100" aria-label="View Source on GitHub">
-              <Github className="h-5 w-5" strokeWidth={1.75} />
-            </a>
-          )}
-          {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-ink-700 transition-colors hover:text-signal-cyan" aria-label="View Live Site">
-              <Globe className="h-5 w-5" strokeWidth={1.75} />
-            </a>
-          )}
         </div>
       </div>
     </motion.article>
