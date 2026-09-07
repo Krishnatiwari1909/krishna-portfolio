@@ -19,7 +19,6 @@ export const profile = {
   },
 }
 
-// Nav sections drive both the floating dock and the scroll-spy highlighting.
 export const navSections = [
   { id: 'hero', label: 'Home' },
   { id: 'projects', label: 'Projects' },
@@ -29,8 +28,6 @@ export const navSections = [
   { id: 'contact', label: 'Contact' },
 ]
 
-// Skill matrix, grouped by category. Each skill can optionally carry a
-// "note" used as a small telemetry-style annotation.
 export const skillGroups = [
   {
     category: 'Languages',
@@ -56,72 +53,81 @@ export const skillGroups = [
   },
 ]
 
-// Projects power the bento grid. `size` controls the grid span in
-// Projects.jsx — "hero" spans 2x2, everything else is a single cell.
 export const projects = [
   {
     id: 'orbitlab',
     size: 'hero',
     name: 'OrbitLab',
     tag: 'Hero Project · Orbital Mechanics',
-    description:
-      'A 3D simulation platform for satellite engineering and orbital mechanics, built for live trajectory modeling and mission visualization.',
-    details:
-      'Spearheaded a 4-member hackathon team across India Innovation, AMD Slingshot, and Microsoft Imagine Cup.',
+    description: 'A 3D simulation platform for satellite engineering and orbital mechanics, built for live trajectory modeling and mission visualization.',
+    details: 'Spearheaded a 4-member hackathon team across India Innovation, AMD Slingshot, and Microsoft Imagine Cup.',
     stack: ['JavaScript', '3D Web Simulation', 'Azure Static Web Apps'],
     accent: 'cyan',
+    githubUrl: 'https://github.com/Krishnatiwari1909',
+    liveUrl: '#', 
   },
   {
     id: 'nutrition-ai',
     size: 'md',
     name: 'AI-Powered Nutrition Application',
     tag: 'Full-Stack · Applied AI',
-    description:
-      'Full-stack React & Tailwind web app that parses natural-language meal descriptions into structured macronutrient data.',
+    description: 'Full-stack React & Tailwind web app parsing natural-language meal descriptions into structured macronutrient data.',
     details: 'Backed by Supabase Edge Functions (Deno) and the Google Gemini API for NLP parsing.',
-    stack: ['React', 'Tailwind CSS', 'Supabase Edge Functions', 'Gemini API'],
+    stack: ['React', 'Tailwind CSS', 'Supabase', 'Gemini API'],
     accent: 'emerald',
+    githubUrl: 'https://github.com/Krishnatiwari1909',
+    liveUrl: null,
+  },
+  {
+    id: 'hybrid-rag',
+    size: 'md',
+    name: 'Hybrid RAG Chatbot',
+    tag: 'LLM Orchestration · RAG',
+    description: 'Zero-latency document retrieval system routing vector embeddings and fast inference across a resilient hybrid cloud pipeline.',
+    details: 'Solves API rate-limiting bottlenecks using ChromaDB, Gemini Embeddings, and the Groq API.',
+    stack: ['Python', 'ChromaDB', 'Groq API', 'Gradio'],
+    accent: 'indigo',
+    githubUrl: 'https://github.com/Krishnatiwari1909/hybrid-rag-chatbot',
+    liveUrl: null,
+  },
+  {
+    id: 'vision-api',
+    size: 'md',
+    name: 'VisionAPI Studio',
+    tag: 'Computer Vision · Microservice',
+    description: 'High-throughput asynchronous image classification REST API microservice powered by Google Vision Transformer (ViT).',
+    details: 'Features a FastAPI asynchronous backend and a dynamic client dashboard for real-time inference.',
+    stack: ['FastAPI', 'Python', 'Vision Transformer', 'Hugging Face'],
+    accent: 'cyan',
+    githubUrl: 'https://github.com/Krishnatiwari1909/vision-api-microservice',
+    liveUrl: null,
+  },
+  {
+    id: 'doc-classifier',
+    size: 'sm',
+    name: 'Smart Document Classifier',
+    tag: 'NLP · Zero-Shot Classification',
+    description: 'Dynamic categorization system categorizing unstructured data into arbitrary user-defined labels on the fly.',
+    details: 'Zero-shot classification pipeline powered by facebook/bart-large-mnli.',
+    stack: ['Python', 'Transformers', 'Gradio', 'PyPDF2'],
+    accent: 'emerald',
+    githubUrl: 'https://github.com/Krishnatiwari1909',
+    liveUrl: null,
   },
   {
     id: 'fire-gas-detection',
-    size: 'md',
-    name: 'Fire and Gas Detection System',
+    size: 'sm',
+    name: 'Fire & Gas Detection System',
     tag: 'Embedded · Computer Vision',
-    description:
-      'Arduino Uno hardware integration with gas sensors and low-level serial communication for real-time environmental sensing.',
-    details: 'Paired with a Python + OpenCV computer-vision layer for visual flame detection.',
-    stack: ['Arduino Uno', 'Serial Communication', 'Python', 'OpenCV'],
+    description: 'Real-time environmental warning system integrating physical gas sensors with a Python/OpenCV vision interface.',
+    details: 'Microcontroller firmware bridging hardware sensor thresholds to a desktop application.',
+    stack: ['Arduino Uno', 'Serial I/O', 'Python', 'OpenCV'],
     accent: 'indigo',
-  },
-  {
-    id: 'expense-tracker',
-    size: 'sm',
-    name: 'Expense Tracker Desktop System',
-    tag: 'Desktop · Core Java',
-    description: 'A standalone Java desktop system for tracking expenses using File I/O streams and string-parsing algorithms.',
-    details: 'Focused on clean parsing logic and persistent local file storage.',
-    stack: ['Java', 'File I/O', 'String Parsing'],
-    accent: 'indigo',
-  },
-  {
-    id: 'maze-runner',
-    size: 'sm',
-    name: 'Maze Runner Game',
-    tag: 'Desktop Game · AI Pathfinding',
-    description: 'A desktop game built with Python and Pygame, featuring automated enemy pathfinding and dynamic maze generation.',
-    details: 'Enemy agents navigate procedurally generated mazes in real time.',
-    stack: ['Python', 'Pygame', 'Pathfinding AI'],
-    accent: 'cyan',
+    githubUrl: null,
+    liveUrl: null,
   },
 ]
 
-// Certificates back the grid + inspection modal.
-//
-// To attach proof images: drop a file into `public/assets/certificates/`
-// and point `image` at it, e.g. `/assets/certificates/toc.jpg`. Any of
-// jpg / png / webp work. Leave `image: null` and the modal falls back to
-// a placeholder "Verified Credential" panel automatically — nothing else
-// needs to change.
 export const certificates = [
   {
     id: 'toc',
@@ -173,8 +179,6 @@ export const certificates = [
   },
 ]
 
-// Extracurricular / leadership log — framed as a mission log, in keeping
-// with the site's telemetry motif.
 export const extracurriculars = [
   {
     id: 'polio-campaign',
@@ -197,10 +201,6 @@ export const extracurriculars = [
   },
 ]
 
-// Resume download — see public/assets/resume/README.md for the exact
-// filename to upload. Contact.jsx's "Download CV" card checks this file
-// exists before triggering the download, so nothing breaks if it's
-// missing yet.
 export const resume = {
   url: '/assets/resume/KrishnaTiwari_Resume.pdf',
   filename: 'KrishnaTiwari_Resume.pdf',
@@ -208,7 +208,7 @@ export const resume = {
 
 export const socials = {
   email: `mailto:${profile.email}`,
-  phone: `tel:${profile.phone.replace(/\s+/g, '')}`,
+  phone: `tel:${profile.phone?.replace(/\s+/g, '') || ''}`,
   github: 'https://github.com/Krishnatiwari1909',
   linkedin: 'https://www.linkedin.com/in/krishna-tiwari-87906b335',
 }
