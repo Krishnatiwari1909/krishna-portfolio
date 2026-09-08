@@ -21,9 +21,11 @@ export const profile = {
 
 export const navSections = [
   { id: 'hero', label: 'Home' },
+  { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'certificates', label: 'Certificates' },
+  // { id: 'experience', label: 'Experience' },
   { id: 'extracurricular', label: 'Beyond Code' },
   { id: 'contact', label: 'Contact' },
 ]
@@ -212,3 +214,36 @@ export const socials = {
   github: 'https://github.com/Krishnatiwari1909',
   linkedin: 'https://www.linkedin.com/in/krishna-tiwari-87906b335',
 }
+// Add 'about' and 'experience' to your navSections array (keep experience commented out or hidden for now)
+
+
+// Add this new About object
+export const aboutData = {
+  heading: "Know Me Better",
+  bio: [
+  "I am a Computer Science and Engineering student at CMR University in Bengaluru, and a full-stack developer specializing in AI-integrated platforms, mobile apps, and cloud architectures. Proficient in React, Node.js, Python, and TypeScript, I am driven by a passion for turning complex problems into robust, scalable software.",
+  "Beyond the screen, I believe in maintaining a strong balance between my technical pursuits and everyday life. Outside of tech, you can usually find me playing the Indian bamboo flute, discovering new music, catching a movie, or going for a ride."
+],
+  images: [
+    "/public/assets/about/krishna1.jpg",
+    "/public/assets/about/krishna2.jpg", 
+    "/public/assets/about/krishna3.jpg"
+  ]
+}
+
+// Add this new Experience/Internship array
+// export const experienceData = [
+//   {
+//     id: 1,
+//     role: "AI/ML Intern",
+//     company: "ScholarX",
+//     duration: "July 2026 - Aug 2026",
+//     description: "Completed project-based domain assignments in Artificial Intelligence and Machine Learning. Submitted practical learning projects for periodic evaluation in a remote environment.",
+//     skills: ["Artificial Intelligence", "Machine Learning", "Python", "Data Processing"],
+//     documents: [
+//       { label: "Offer Letter", url: "/scholarx-offer.jpg" },
+//       // Make sure your certificate image is saved in the public folder and matches this name!
+//       { label: "Completion Certificate", url: "/public/assets/internship/scholarx-cert.jpg" } 
+//     ]
+//   }
+// ]

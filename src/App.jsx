@@ -7,7 +7,8 @@ import Certificates from './components/Certificates'
 import Extracurriculars from './components/Extracurriculars'
 import Contact from './components/Contact'
 import Toast from './components/Toast'
-
+import About from './components/About'
+// import Experience from './components/Experience'
 // App.jsx
 // Composition root. Owns two pieces of cross-cutting state that many
 // sections would otherwise need to duplicate:
@@ -64,9 +65,11 @@ export default function App() {
 
         <main>
           <Hero />
+          <About />
           <Projects />
           <Skills />
           <Certificates />
+          {/* <Experience /> */}
           <Extracurriculars />
           <Contact onCopy={showToast} />
         </main>
