@@ -225,9 +225,9 @@ export const aboutData = {
   "Beyond the screen, I believe in maintaining a strong balance between my technical pursuits and everyday life. Outside of tech, you can usually find me playing the Indian bamboo flute, discovering new music, catching a movie, or going for a ride."
 ],
   images: [
-    "/public/assets/about/krishna1.jpg",
-    "/public/assets/about/krishna2.jpg", 
-    "/public/assets/about/krishna3.jpg"
+    "/public/assets/about/krishna-1.jpg",
+    "/public/assets/about/krishna-2.jpg", 
+    "/public/assets/about/krishna-3.jpg"
   ]
 }
 
