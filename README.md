@@ -5,7 +5,7 @@ A dynamic, interactive personal developer portfolio built for the CMR University
 This project goes beyond a static HTML page by utilizing a component-driven React architecture, complete with interactive 3D physics, modular data structures, and a modern "Glassmorphism" UI design.
 
 ## 🚀 Live Deployment
-**Live Demo:** krishnatiwari-portfolio.vercel.app
+**Live Demo:** <krishnatiwari-portfolio.vercel.app>
 
 ## 🛠️ Tech Stack & Architecture
 * **Frontend Framework:** React.js (Bootstrapped with Vite for instant HMR)
